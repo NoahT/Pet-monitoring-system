@@ -25,7 +25,7 @@ def connection_manager(connection_socket):
                 file_name = request.split()[1][1:]
                 print(file_name)
                 file = open(file_name,'rb')
-                file_data = f.read()
+                file_data = file.read()
 
                 http_header = 'HTTP/1.0 200 Ok\n\nHi'
                 connection_socket.send(http_header.encode())
