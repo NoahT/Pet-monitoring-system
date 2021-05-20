@@ -1,2 +1,3 @@
 Server/twilio.env
 Server/__pycache__/
+.DS_Store
