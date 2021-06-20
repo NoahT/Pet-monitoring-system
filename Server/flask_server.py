@@ -21,14 +21,12 @@ def arduino():
     payload = {}
     print(location)
     if esp_displacement.beyond_threshold(location):
-        # message = client.messages.create(
-        #                       body='Hello! Just informing you that your pet potentially escaped.',
-        #                       from_='+17603345880',
-        #                       to='+PERSONAL NUMBER')
-        print("Escape!")
+        message = client.messages.create(
+                              body='Hello! Just informing you that your pet potentially escaped.',
+                              from_='+17603345880',
+                              to='+PERSONAL NUMBER')
         payload['escape'] = True
     else:
-        print("No escape!")
         payload['escape'] = False
     return json.dumps(payload)
 
